@@ -288,14 +288,14 @@ function getOperationSystemDetails() {
   return os.name();
 }
 const generationDetails = dedent`
-    Only reply with the single line command surrounded by three backticks. It must be able to be directly run in the target shell. Do not include any other text.
+    Write an executable script or a program. Do not include any other text.
 
-    Make sure the command runs on ${getOperationSystemDetails()} operating system.
+    Give also all the intructions for setting up the environment and libraries on this ${getOperationSystemDetails()} operating system.
   `;
 
 function getFullPrompt(prompt: string) {
   return dedent`
-    Create a single line command that one can enter in a terminal and run, based on what is specified in the prompt.
+    You are a helpful AI Hacker assistant.  
 
     ${shellDetails}
 
